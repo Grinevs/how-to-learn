@@ -369,7 +369,7 @@
   color: #fff;
 }
 
-.footer__social-icon {
+.footer__list {
   padding-bottom: 16px;
   list-style-type: none;
   margin: 0;
@@ -379,6 +379,6 @@
   font-size: 18px;
 }
 
-.footer__img_place_icons {
+.footer__social-icon {
   padding: 0 10px;
 }
