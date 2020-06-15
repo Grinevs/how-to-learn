@@ -243,11 +243,14 @@
   color: white;
   margin-right: 20px;
   z-index: 5;
+  padding-top: 80px;
 }
 
 .table_theme_dark {
-  margin-top: 80px;
   z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .kaufman {
@@ -280,12 +283,6 @@
   font-weight: normal;
   text-align: center;
   margin: 0;
-}
-
-.table_theme_dark {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .table__heading_theme_dark {
