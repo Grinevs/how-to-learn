@@ -241,12 +241,12 @@
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 20px;
+  margin-right: 10px;
   z-index: 5;
   padding-top: 80px;
 }
 
-.table_theme_dark {
+.kayfman__table_theme_dark {
   z-index: 5;
   display: flex;
   flex-wrap: wrap;
