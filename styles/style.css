@@ -61,12 +61,9 @@
   z-index: 1;
 }
 
-.link {
+.header__link {
   color: #2f80ed;
   text-decoration: none;
-}
-
-.header__link {
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -90,18 +87,18 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  padding: 100px 0;
-}
-.two-columns__brief {
-  width: 175px;
+  margin-top: 100px;
+/* Тяжело понять,прочитал много но ничего не понял :D */
+  /* насколько я понимаю ту каломнс является блоком и я не могу применятьвнешние отступы к блоку? или это не так? */
 }
 
-.two-columns__title {
+.two-columns__brief {
   margin: 0;
   line-height: 1.2em;
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  width: 175px;
 }
 
 .two-columns__main-text {
@@ -112,15 +109,19 @@
   align-content: space-between;
 }
 .two-columns__paragraph {
-  margin: 0;
+  margin: 0 0 30px 0;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
 }
 
-.two-columns__paragraph_padding {
-  padding: 30px 0;
+.two-columns__paragraph:last-child {
+  margin: 0;
 }
+
+/* .two-columns__paragraph_padding {
+  padding: 30px 0;
+} */
 
 .two-columns__span-accent {
   margin: 0 10px 0 0;
@@ -139,44 +140,34 @@
 
 .section-title {
   width: 60%;
-
-}
-
-.section-title__title {
   line-height: 69px;
   font-size: 60px;
   font-weight: bold;
-  padding-top: 100px;
-  margin: 0;
+  margin: 100px 0 0 0;
   text-align: center;
 }
+
 .section-subtitle {
   width: 60%;
-}
-
-.section-subtitle__title {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin: 0;
+  margin: 30px 0 0 0;
   text-align: center;
-  padding-top: 20px;
 }
+
 
 .table {
   width: 1100px;
-  padding-bottom: 100px;
-}
-
-.table__row {
-  padding-top: 60px;
+  margin-bottom: 100px;   /* так же не уверен в правильности использования маргина, так как это блок? */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;       /* Должен ли работать автоматиеский перенос, и если да то как ео сделать? :) */
   justify-content: space-around;
   align-content: flex-start;
 }
 
 .table__cell {
+  margin-top: 60px;
   width: 250px;
 }
 
@@ -190,8 +181,7 @@
   line-height: 1.2em;
   font-size: 18px;
   font-weight: normal;
-  margin: 0;
-  padding-top: 20px;
+  margin: 20px 0 0 0;
 }
 
 .feynman {
@@ -205,7 +195,7 @@
   background-position: left bottom;
   background-color: #f2f2f2;
   position: relative;
-  padding-top: 100px;
+  padding-top: 100px;  /* Паддинг тут уместен дляэтого блока? */
 }
 
 .feynman__title {
@@ -222,7 +212,7 @@
   font-size: 36px;
   font-weight: normal;
   margin: 0;
-  padding-top: 70px;
+  margin-top: 70px;
 }
 
 .feynman__link {
@@ -233,7 +223,7 @@
   right: 48px;
   color: black;
   top: 50%;
-
+  text-decoration: none;
 }
 
 
@@ -243,14 +233,11 @@
   color: white;
   margin-right: 10px;
   z-index: 5;
-  padding-top: 80px;
+  margin-top: 80px;
 }
 
 .table_theme_dark {
   z-index: 5;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .kaufman {
@@ -259,56 +246,36 @@
   flex-direction: column;
   align-items: center;
   color: white;
-  padding-bottom: 90px;
   overflow: hidden;
   position: relative;
 }
 
-
 .section-title_theme_dark {
-  padding-top: 90px;
-  width: 60%;
-  line-height: 69px;
-  font-size: 69px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
+  margin: 90px 0 0;
 }
 
 .section-subtitle_theme_dark {
-  width: 60%;
-  padding-top: 20px;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  text-align: center;
-  margin: 0;
+  margin: 20px 0 0 0;
 }
 
 .table__heading_theme_dark {
-  margin: 0;
   text-align: left;
-  font-weight: bold;
-  line-height: 1.15em;
-  font-size: 24px;
-
 }
 
 .table__text_theme_dark {
-  margin: 0;
-  padding-top: 20px;
-  line-height: 1.2em;
-  font-size: 18px;
-  font-weight: normal;
+
 }
 
 .kaufman__triangle {
-  position: absolute;
-  z-index: 0;
+  background-image: url('../images/kaufman-triangle.svg');
   right: -210px;
   top: 10px;
+  position: absolute;
   width: 877px;
   height: 877px;
+  background-size: 877px 877px;  /*  не до конца понимаю правильность использования здесь бекграундсайза */
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .footer {
@@ -316,12 +283,12 @@
   justify-content: center;
   background-color: #1f1f1f;
   color: white;
-  padding-top: 60px;
-  padding-bottom: 40px;
   min-height: 350px;
+  /* box-sizing: border-box;  так и не понял как работает бокс сайзинг, MDN не помог =) */
 }
 
 .footer__columns {
+  margin: 60px 0 40px 0;  /* Снова тот же вопрос, маргины тут уместны? это же вроде блок?*/
   display: flex;
   width: 90%;
   justify-content: space-between;
@@ -340,7 +307,7 @@
 }
 
 .footer__author {
-  padding: 16px 0;
+  margin: 16px 0;
   font-weight: normal;
   line-height: 25px;
   font-size: 18px;
@@ -349,26 +316,25 @@
 
 .footer__column-heading {
   margin: 0;
-  padding-bottom: 20px;
   font-weight: bold;
   line-height: 30px;
   font-size: 18px;
 }
 
 .footer__column-links {
-  padding-bottom: 16px;
   list-style-type: none;
-  margin: 0;
-  padding-left: 0;
+  margin: 16px 0 16px 0;
   font-weight: normal;
   line-height: 30px;
+  padding-left: 0;
   font-size: 18px;
 }
 
 .footer__link {
   color: #fff;
+  text-decoration: none;
 }
 
 .footer__social-icon {
-  padding: 0 10px;
+  margin: 0 10px;
 }
