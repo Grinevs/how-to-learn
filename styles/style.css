@@ -34,12 +34,12 @@
 }
 
 .header__title {
-  position: absolute;
-  left: 64px;
+  margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
   width: 730px;
+  z-index: 5;
 }
 
 .header__subtitle {
@@ -82,14 +82,15 @@
   justify-content: center;
 }
 
+.description__two-columns {
+  margin-top: 100px;
+}
+
 .two-columns {
   position: relative;
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
-/* Тяжело понять,прочитал много но ничего не понял :D */
-  /* насколько я понимаю ту каломнс является блоком и я не могу применятьвнешние отступы к блоку? или это не так? */
 }
 
 .two-columns__brief {
@@ -108,6 +109,7 @@
   flex-direction: column;
   align-content: space-between;
 }
+
 .two-columns__paragraph {
   margin: 0 0 30px 0;
   line-height: 34px;
@@ -119,10 +121,6 @@
   margin: 0;
 }
 
-/* .two-columns__paragraph_padding {
-  padding: 30px 0;
-} */
-
 .two-columns__span-accent {
   margin: 0 10px 0 0;
   line-height: 34px;
@@ -130,13 +128,11 @@
   font-weight: bold;
 }
 
-
 .digits {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
 
 .section-title {
   width: 60%;
@@ -159,11 +155,15 @@
 
 .table {
   width: 1100px;
-  margin-bottom: 100px;   /* так же не уверен в правильности использования маргина, так как это блок? */
   display: flex;
-  flex-wrap: wrap;       /* Должен ли работать автоматиеский перенос, и если да то как ео сделать? :) */
+  flex-wrap: wrap;
   justify-content: space-around;
   align-content: flex-start;
+
+}
+
+.digits__table {
+  margin-bottom: 100px;
 }
 
 .table__cell {
@@ -177,6 +177,7 @@
   font-weight: bold;
   margin: 0;
 }
+
 .table__text {
   line-height: 1.2em;
   font-size: 18px;
@@ -195,7 +196,6 @@
   background-position: left bottom;
   background-color: #f2f2f2;
   position: relative;
-  padding-top: 100px;  /* Паддинг тут уместен дляэтого блока? */
 }
 
 .feynman__title {
@@ -203,7 +203,7 @@
   line-height: 1.15em;
   font-size: 120px;
   font-weight: bold;
-  margin: 0;
+  margin: 100px 0 0 0;
   text-align: center;
 }
 
@@ -240,6 +240,10 @@
   z-index: 5;
 }
 
+.kaufman__table {
+  margin-bottom: 90px;
+}
+
 .kaufman {
   background-color: #1f1f1f;
   display: flex;
@@ -262,10 +266,6 @@
   text-align: left;
 }
 
-.table__text_theme_dark {
-
-}
-
 .kaufman__triangle {
   background-image: url('../images/kaufman-triangle.svg');
   right: -210px;
@@ -273,7 +273,7 @@
   position: absolute;
   width: 877px;
   height: 877px;
-  background-size: 877px 877px;  /*  не до конца понимаю правильность использования здесь бекграундсайза */
+  background-size: 877px 877px;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -284,11 +284,11 @@
   background-color: #1f1f1f;
   color: white;
   min-height: 350px;
-  /* box-sizing: border-box;  так и не понял как работает бокс сайзинг, MDN не помог =) */
+  box-sizing: border-box;
 }
 
 .footer__columns {
-  margin: 60px 0 40px 0;  /* Снова тот же вопрос, маргины тут уместны? это же вроде блок?*/
+  margin: 60px 0 40px 0;
   display: flex;
   width: 90%;
   justify-content: space-between;
