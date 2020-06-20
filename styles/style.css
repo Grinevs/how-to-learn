@@ -285,15 +285,15 @@
   color: white;
   min-height: 350px;
   box-sizing: border-box;
+  padding: 60px 0 40px 0;
 }
 
 .footer__columns {
-  margin: 60px 0 40px 0;
   display: flex;
   width: 90%;
   justify-content: space-between;
-
 }
+
 .footer__column_content_copyright {
   display: flex;
   flex-basis: 711px;
