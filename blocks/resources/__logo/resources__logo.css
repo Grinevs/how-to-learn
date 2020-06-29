@@ -1,6 +1,16 @@
 .resources__logo {
-  min-width: 270px;
-  height: 38px;
+  
   display: flex;
-  justify-content: center;
+  justify-content:center;
+  opacity: 1;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  
 }
+
+.resources__logo:hover {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+

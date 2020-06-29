@@ -8,6 +8,7 @@
   font-weight: normal;
   margin: 30px 0 0 0;
   text-align: center;
+  z-index: 1;
 }
 
 .techniques > .section-subtitle {
