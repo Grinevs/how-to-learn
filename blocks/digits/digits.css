@@ -1,0 +1,7 @@
+@import url(./__table/digits__table.css);
+
+.digits {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
