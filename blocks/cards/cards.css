@@ -4,8 +4,9 @@
 @import url(./__title/cards__title.css);
 
 .cards {
-  min-width: 920px;
+  width: 920px;
   display: flex;
   flex-wrap: wrap;
- 
+  margin: 0;
+  padding: 0;
 }
